@@ -1,11 +1,9 @@
 name: Build and Push Docker Image
 
 on:
-  schedule:
-      - cron: "0 7 * * 1,3,5"
   push:
     branches:
-      - "master"
+      - "master"  # Rulează doar la push pe ramura "master"
 
 jobs:
   docker-arm:
