@@ -1,3 +1,4 @@
+
 # Differences from the original
 
 automatic build and push docker image every Monday, Wednesday, Friday  
@@ -5,6 +6,7 @@ updated alpine and packages
 added dns cloudflare  
 added to duplicate_cn  
 key size changed 4096
+adguard dns 
 
 # OpenVPN for Docker
 
