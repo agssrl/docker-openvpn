@@ -34,7 +34,7 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: |
-            nubacuk/docker-openvpn:aarch64
+            agssrl/docker-openvpn:aarch64
 
   docker-x64:
     runs-on: ubuntu-latest
@@ -64,4 +64,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            nubacuk/docker-openvpn:x86_64
+            agssrl/docker-openvpn:x86_64
