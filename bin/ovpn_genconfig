@@ -329,7 +329,14 @@ key-direction 0
 keepalive $OVPN_KEEPALIVE
 persist-key
 persist-tun
-duplicate-cn
+
+# Enforce unique client certificates; override via explicit flag if needed
+;duplicate-cn
+
+# Harden control channel and min TLS version
+tls-version-min 1.2
+tls-cipher TLS-ECDHE-RSA-WITH-AES-256-GCM-SHA384:TLS-ECDHE-ECDSA-WITH-AES-256-GCM-SHA384
+tls-ciphersuites TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256
 
 cipher AES-256-GCM
 data-ciphers AES-256-GCM
