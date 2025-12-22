@@ -3,5 +3,5 @@
 # See https://github.com/google/google-authenticator-libpam#usersome-user
 auth required pam_google_authenticator.so secret=/etc/openvpn/otp/${USER}.google_authenticator user=root
 
-# Accept any user since we're dealing with virtual users there's no need to have a system account (pam_unix.so)
-account sufficient pam_permit.so
+# Enforce OTP + a local account check; only allow users present in the container
+account required pam_unix.so
